@@ -1,9 +1,4 @@
 <?php
-$cantidad = $_GET["numero"];
-$numero = $_GET["num"];
-$resultado = 0;
-for ($i = 0; $i < $cantidad; $i++) {
-    $resultado = $numero + $numero;
-}
-echo "$resultado";
+$suma = array_sum($_POST['numero']);
+echo "La suma es:" . $suma;
 ?>
