@@ -1,5 +1,17 @@
 <?php
 $datos = $_POST ?? [];
+function validar_dato($campo, $valor) {
+    switch($campo) {
+        case 'email':
+            return filter_var($valor, FILTER_VALIDATE_EMAIL) ? $valor : 'Email no válido';
+        case 'url':
+            return filter_var($valor, FILTER_VALIDATE_URL) ? $valor : 'URL no válida';
+        case 'numConvivientes':
+            return filter_var($valor, FILTER_VALIDATE_INT, ["options"=>["min_range"=>0, "max_range"=>20]]) !== false ? $valor : 'Número no válido';
+        default:
+            return $valor;
+    }
+}
 ?>
 
 <!DOCTYPE html>
