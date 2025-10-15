@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Domínguez Hinjos">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>402formulario</title>
+</head>
+
+<body>
+    <form action="../php/402formulario.php" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Apellidos">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">URL página personal.</label>
+            <input type="text" class="form-control" name="url" id="url" placeholder="URL página personal.">
+        </div>
+        <br>
+        <label class="form-label">Género:</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre">
+            <label class="form-check-label" for="hombre">
+                Hombre
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
+            <label class="form-check-label" for="mujer">
+                Mujer
+            </label>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Número de Convivientes</label>
+            <input type="number" class="form-control" name="numConvivientes" id="numConvivientes">
+        </div>
+        <br>
+        <label for="form-label">Aficiones:</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Fútbol" id="futbol">
+            <label class="form-check-label" for="futbol">Fútbol</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Lectura" id="lectura">
+            <label class="form-check-label" for="lectura">Lectura</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Música" id="musica">
+            <label class="form-check-label" for="musica">Música</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Videojuegos" id="videojuegos">
+            <label class="form-check-label" for="videojuegos">Videojuegos</label>
+        </div>
+        <br>
+        <label for="form-label">Menú favorito:</label>
+        <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="menu">
+            <option selected>-Seleccione una opción-</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Ensalada">Ensalada</option>
+            <option value="Hamburguesa">Hamburguesa</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</body>
+
+</html>
