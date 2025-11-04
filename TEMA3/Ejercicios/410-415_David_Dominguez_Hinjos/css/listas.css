@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a72, #009ffd);
+    background-size: 300% 300%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    animation: bgMove 10s ease-in-out infinite alternate;
+    padding: 40px 10px;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00c6ff;
+    }
+
+    to {
+        text-shadow: 0 0 25px #0072ff;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+li:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 15px #00c6ff;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #00c6ff;
+    text-shadow: 0 0 10px #00c6ff;
+}
+
+p {
+    margin-top: 20px;
+}
